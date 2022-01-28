@@ -6,6 +6,7 @@ from typing import Union
 
 from .datacacheconfig import DataCacheConfig
 from .filterconfig import FilterConfig
+from .functionconfig import FunctionConfig, FunctionStatus
 from .mappingconfig import MappingConfig
 from .resourceconfig import ResourceConfig
 from .transformationconfig import TransformationConfig, TransformationStatus
@@ -13,6 +14,8 @@ from .transformationconfig import TransformationConfig, TransformationStatus
 __all__ = (
     "DataCacheConfig",
     "FilterConfig",
+    "FunctionConfig",
+    "FunctionStatus",
     "MappingConfig",
     "ResourceConfig",
     "StrategyConfig",
@@ -21,5 +24,5 @@ __all__ = (
 )
 
 StrategyConfig = Union[
-    FilterConfig, MappingConfig, ResourceConfig, TransformationConfig
+    FilterConfig, FunctionConfig, MappingConfig, ResourceConfig, TransformationConfig
 ]
